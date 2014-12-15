@@ -61,6 +61,7 @@
 		C36B83D01A35D64B00672E95 /* sex.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B01A35D64B00672E95 /* sex.png */; };
 		C36B83D11A35D64B00672E95 /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B11A35D64B00672E95 /* meeting.png */; };
 		C3C94EFA1A35D5840066A05A /* SpareTimeCategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */; };
+		C3E2BF111A3F42D000D80955 /* PartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E2BF101A3F42D000D80955 /* PartyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,8 @@
 		C36B83B11A35D64B00672E95 /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
 		C3C94EF81A35D5840066A05A /* SpareTimeCategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpareTimeCategoryButton.h; sourceTree = "<group>"; };
 		C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpareTimeCategoryButton.m; sourceTree = "<group>"; };
+		C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyViewController.h; sourceTree = "<group>"; };
+		C3E2BF101A3F42D000D80955 /* PartyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,20 +245,11 @@
 		3010B57717E9FAB0006791FB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C35099A61A3CAE5200F9F8F4 /* RECommonFunctions.h */,
-				C35099A71A3CAE5200F9F8F4 /* RECommonFunctions.m */,
-				C35099A81A3CAE5200F9F8F4 /* REFrostedContainerViewController.h */,
-				C35099A91A3CAE5200F9F8F4 /* REFrostedContainerViewController.m */,
-				C35099AA1A3CAE5200F9F8F4 /* REFrostedViewController.h */,
-				C35099AB1A3CAE5200F9F8F4 /* REFrostedViewController.m */,
-				C35099AC1A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.h */,
-				C35099AD1A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.m */,
-				C35099AE1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.h */,
-				C35099AF1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m */,
-				C35099B01A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.h */,
-				C35099B11A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m */,
+				C3E2BF0E1A3F424900D80955 /* SideBar */,
 				C33DFA521A35EC8800793B04 /* SideBarContent.h */,
 				C33DFA531A35EC8800793B04 /* SideBarContent.m */,
+				C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */,
+				C3E2BF101A3F42D000D80955 /* PartyViewController.m */,
 				C3C94EF81A35D5840066A05A /* SpareTimeCategoryButton.h */,
 				C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */,
 				3010B56E17E9FA8C006791FB /* STCategoryViewController.h */,
@@ -268,6 +262,25 @@
 				3010B57217E9FA96006791FB /* DEMOSecondViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C3E2BF0E1A3F424900D80955 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				C35099A61A3CAE5200F9F8F4 /* RECommonFunctions.h */,
+				C35099A71A3CAE5200F9F8F4 /* RECommonFunctions.m */,
+				C35099A81A3CAE5200F9F8F4 /* REFrostedContainerViewController.h */,
+				C35099A91A3CAE5200F9F8F4 /* REFrostedContainerViewController.m */,
+				C35099AA1A3CAE5200F9F8F4 /* REFrostedViewController.h */,
+				C35099AB1A3CAE5200F9F8F4 /* REFrostedViewController.m */,
+				C35099AC1A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.h */,
+				C35099AD1A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.m */,
+				C35099AE1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.h */,
+				C35099AF1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m */,
+				C35099B01A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.h */,
+				C35099B11A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m */,
+			);
+			name = SideBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +384,7 @@
 				C35099B21A3CAE5200F9F8F4 /* RECommonFunctions.m in Sources */,
 				3010B57617E9FAAA006791FB /* DEMONavigationController.m in Sources */,
 				C33DFA541A35EC8800793B04 /* SideBarContent.m in Sources */,
+				C3E2BF111A3F42D000D80955 /* PartyViewController.m in Sources */,
 				3010B57017E9FA8C006791FB /* STCategoryViewController.m in Sources */,
 				C35099B61A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m in Sources */,
 				C35099B41A3CAE5200F9F8F4 /* REFrostedViewController.m in Sources */,
