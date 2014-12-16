@@ -60,6 +60,9 @@
 		C36B83CF1A35D64B00672E95 /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83AF1A35D64B00672E95 /* games.png */; };
 		C36B83D01A35D64B00672E95 /* sex.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B01A35D64B00672E95 /* sex.png */; };
 		C36B83D11A35D64B00672E95 /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B11A35D64B00672E95 /* meeting.png */; };
+		C3A512D01A409E1300C5DAF9 /* kawa1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CD1A409E1300C5DAF9 /* kawa1.png */; };
+		C3A512D11A409E1300C5DAF9 /* kawa2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CE1A409E1300C5DAF9 /* kawa2.png */; };
+		C3A512D21A409E1300C5DAF9 /* kawa3.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CF1A409E1300C5DAF9 /* kawa3.png */; };
 		C3C94EFA1A35D5840066A05A /* SpareTimeCategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */; };
 		C3E2BF111A3F42D000D80955 /* PartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E2BF101A3F42D000D80955 /* PartyViewController.m */; };
 /* End PBXBuildFile section */
@@ -134,6 +137,9 @@
 		C36B83AF1A35D64B00672E95 /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
 		C36B83B01A35D64B00672E95 /* sex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sex.png; sourceTree = "<group>"; };
 		C36B83B11A35D64B00672E95 /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
+		C3A512CD1A409E1300C5DAF9 /* kawa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa1.png; sourceTree = "<group>"; };
+		C3A512CE1A409E1300C5DAF9 /* kawa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa2.png; sourceTree = "<group>"; };
+		C3A512CF1A409E1300C5DAF9 /* kawa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa3.png; sourceTree = "<group>"; };
 		C3C94EF81A35D5840066A05A /* SpareTimeCategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpareTimeCategoryButton.h; sourceTree = "<group>"; };
 		C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpareTimeCategoryButton.m; sourceTree = "<group>"; };
 		C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyViewController.h; sourceTree = "<group>"; };
@@ -202,6 +208,9 @@
 		3010B54317E9FA67006791FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3A512CD1A409E1300C5DAF9 /* kawa1.png */,
+				C3A512CE1A409E1300C5DAF9 /* kawa2.png */,
+				C3A512CF1A409E1300C5DAF9 /* kawa3.png */,
 				C36B83921A35D64B00672E95 /* background.png */,
 				C36B83931A35D64B00672E95 /* background1.jpg */,
 				C36B83941A35D64B00672E95 /* play.png */,
@@ -342,15 +351,18 @@
 				C36B83CE1A35D64B00672E95 /* food.png in Resources */,
 				C36B83C11A35D64B00672E95 /* bck_running.png in Resources */,
 				C36B83C01A35D64B00672E95 /* bck_bike.png in Resources */,
+				C3A512D21A409E1300C5DAF9 /* kawa3.png in Resources */,
 				C36B83BD1A35D64B00672E95 /* bck_games.png in Resources */,
 				C36B83C41A35D64B00672E95 /* bck_soccer.png in Resources */,
 				C36B83CC1A35D64B00672E95 /* smoke.png in Resources */,
 				C36B83B91A35D64B00672E95 /* bck_cinema.png in Resources */,
 				C36B83BC1A35D64B00672E95 /* bck_food.png in Resources */,
 				3010B57917E9FAFA006791FB /* avatar@2x.jpg in Resources */,
+				C3A512D01A409E1300C5DAF9 /* kawa1.png in Resources */,
 				C36B83B21A35D64B00672E95 /* background.png in Resources */,
 				C36B83D11A35D64B00672E95 /* meeting.png in Resources */,
 				C36B83B61A35D64B00672E95 /* cinema.png in Resources */,
+				C3A512D11A409E1300C5DAF9 /* kawa2.png in Resources */,
 				C36B83C51A35D64B00672E95 /* bck_meeting.png in Resources */,
 				C36B83B71A35D64B00672E95 /* barsports.png in Resources */,
 				C36B83C61A35D64B00672E95 /* bck_walk.png in Resources */,

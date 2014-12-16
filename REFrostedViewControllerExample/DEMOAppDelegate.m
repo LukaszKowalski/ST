@@ -20,7 +20,7 @@
     // Create content and menu controllers
     //
     DEMONavigationController *navigationController = [[DEMONavigationController alloc] initWithRootViewController:[[STCategoryViewController alloc] init]];
-    DEMOMenuViewController *menuController = [[DEMOMenuViewController alloc] initWithStyle:UITableViewStylePlain];
+    DEMOMenuViewController *menuController = [[DEMOMenuViewController alloc] init];
     
     // Create frosted view controller
     //

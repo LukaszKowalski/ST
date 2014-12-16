@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UITableView *PartyTableView = [[UITableView alloc] init];
-    PartyTableView.dataSource = self;
     
 }
 
@@ -27,13 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
 
-- (void)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell 
-}
 
 /*
 #pragma mark - Navigation

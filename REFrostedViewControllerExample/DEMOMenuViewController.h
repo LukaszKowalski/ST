@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
 
-@interface DEMOMenuViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface DEMOMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) UITableView *tableView;
 
 @end
