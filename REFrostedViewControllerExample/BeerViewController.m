@@ -32,11 +32,11 @@
  
     [super viewDidLoad];
     
-    UIView *search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 300, 36)];
+    UIView *search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 274, 36)];
     search.backgroundColor = [UIColor clearColor];
     [self.view addSubview:search];
     
-    UITextField *serchTextField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, 290, 36)];
+    UITextField *serchTextField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, 274, 36)];
     
     UIColor *color = [UIColor whiteColor];
     serchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Szukaj" attributes:@{NSForegroundColorAttributeName: color}];

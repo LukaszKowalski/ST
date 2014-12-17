@@ -16,7 +16,7 @@
 
 #define Category_Box_Height 72
 #define Category_Subclass_Height 36
-#define Category_Object_Height 146
+#define Category_Object_Height 152
 
 @interface PartyViewController ()
 
@@ -33,11 +33,11 @@
 
     [super viewDidLoad];
     
-    self.search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 300, 36)];
+    self.search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 274, 36)];
     self.search.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.search];
     
-    UITextField *serchTextField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, 290, 36)];
+    UITextField *serchTextField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, 274, 36)];
     
     UIColor *color = [UIColor whiteColor];
     serchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Szukaj" attributes:@{NSForegroundColorAttributeName: color}];

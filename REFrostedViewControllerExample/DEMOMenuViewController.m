@@ -35,7 +35,7 @@
                                                object:nil];
     [super viewDidLoad];
     
-    self.search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 300, 36)];
+    self.search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 274, 36)];
     self.search.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.search];
     
@@ -47,7 +47,7 @@
     serchTextField.textColor = [UIColor whiteColor];
     [self.search addSubview: serchTextField];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(8, 50, self.view.frame.size.width - 64, 550)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(8, 50, 274, 550)];
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.opaque = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
