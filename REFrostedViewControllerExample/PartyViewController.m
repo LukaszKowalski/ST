@@ -54,12 +54,26 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if (scrollView.contentOffset.y > 100) {
+    if (scrollView.contentOffset.y >= Category_Box_Height) {
         NSLog(@"scroll");
         self.search.backgroundColor = [UIColor blueColor];
 
     }
+    if (scrollView.contentOffset.y < Category_Box_Height) {
+        NSLog(@"scroll");
+        self.search.backgroundColor = [UIColor clearColor];
+        
+    }
+
 }
+//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    if (scrollView.contentOffset.y >= Category_Box_Height) {
+//       self.search.backgroundColor = [UIColor blueColor];
+//    }
+//    else if (scrollView.contentOffset.x >= 320) {
+//        NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
+//    }
+//}
 
 #pragma mark -
 #pragma mark UITableView Delegate
