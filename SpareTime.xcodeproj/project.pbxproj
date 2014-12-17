@@ -60,6 +60,9 @@
 		C36B83CF1A35D64B00672E95 /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83AF1A35D64B00672E95 /* games.png */; };
 		C36B83D01A35D64B00672E95 /* sex.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B01A35D64B00672E95 /* sex.png */; };
 		C36B83D11A35D64B00672E95 /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83B11A35D64B00672E95 /* meeting.png */; };
+		C36DEF681A41AD5100C79176 /* CoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36DEF671A41AD5100C79176 /* CoffeeViewController.m */; };
+		C36DEF6B1A41AD8500C79176 /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36DEF6A1A41AD8500C79176 /* BeerViewController.m */; };
+		C36DEF6E1A41AD9000C79176 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36DEF6D1A41AD9000C79176 /* FoodViewController.m */; };
 		C3A512D01A409E1300C5DAF9 /* kawa1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CD1A409E1300C5DAF9 /* kawa1.png */; };
 		C3A512D11A409E1300C5DAF9 /* kawa2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CE1A409E1300C5DAF9 /* kawa2.png */; };
 		C3A512D21A409E1300C5DAF9 /* kawa3.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A512CF1A409E1300C5DAF9 /* kawa3.png */; };
@@ -137,6 +140,12 @@
 		C36B83AF1A35D64B00672E95 /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
 		C36B83B01A35D64B00672E95 /* sex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sex.png; sourceTree = "<group>"; };
 		C36B83B11A35D64B00672E95 /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
+		C36DEF661A41AD5100C79176 /* CoffeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeViewController.h; sourceTree = "<group>"; };
+		C36DEF671A41AD5100C79176 /* CoffeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeViewController.m; sourceTree = "<group>"; };
+		C36DEF691A41AD8500C79176 /* BeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerViewController.h; sourceTree = "<group>"; };
+		C36DEF6A1A41AD8500C79176 /* BeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerViewController.m; sourceTree = "<group>"; };
+		C36DEF6C1A41AD9000C79176 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		C36DEF6D1A41AD9000C79176 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		C3A512CD1A409E1300C5DAF9 /* kawa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa1.png; sourceTree = "<group>"; };
 		C3A512CE1A409E1300C5DAF9 /* kawa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa2.png; sourceTree = "<group>"; };
 		C3A512CF1A409E1300C5DAF9 /* kawa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawa3.png; sourceTree = "<group>"; };
@@ -257,8 +266,7 @@
 				C3E2BF0E1A3F424900D80955 /* SideBar */,
 				C33DFA521A35EC8800793B04 /* SideBarContent.h */,
 				C33DFA531A35EC8800793B04 /* SideBarContent.m */,
-				C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */,
-				C3E2BF101A3F42D000D80955 /* PartyViewController.m */,
+				C36DEF651A41AD1700C79176 /* Categories */,
 				C3C94EF81A35D5840066A05A /* SpareTimeCategoryButton.h */,
 				C3C94EF91A35D5840066A05A /* SpareTimeCategoryButton.m */,
 				3010B56E17E9FA8C006791FB /* STCategoryViewController.h */,
@@ -271,6 +279,21 @@
 				3010B57217E9FA96006791FB /* DEMOSecondViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C36DEF651A41AD1700C79176 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */,
+				C3E2BF101A3F42D000D80955 /* PartyViewController.m */,
+				C36DEF661A41AD5100C79176 /* CoffeeViewController.h */,
+				C36DEF671A41AD5100C79176 /* CoffeeViewController.m */,
+				C36DEF691A41AD8500C79176 /* BeerViewController.h */,
+				C36DEF6A1A41AD8500C79176 /* BeerViewController.m */,
+				C36DEF6C1A41AD9000C79176 /* FoodViewController.h */,
+				C36DEF6D1A41AD9000C79176 /* FoodViewController.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		C3E2BF0E1A3F424900D80955 /* SideBar */ = {
@@ -392,6 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36DEF6E1A41AD9000C79176 /* FoodViewController.m in Sources */,
+				C36DEF6B1A41AD8500C79176 /* BeerViewController.m in Sources */,
 				C3C94EFA1A35D5840066A05A /* SpareTimeCategoryButton.m in Sources */,
 				C35099B21A3CAE5200F9F8F4 /* RECommonFunctions.m in Sources */,
 				3010B57617E9FAAA006791FB /* DEMONavigationController.m in Sources */,
@@ -400,6 +425,7 @@
 				3010B57017E9FA8C006791FB /* STCategoryViewController.m in Sources */,
 				C35099B61A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m in Sources */,
 				C35099B41A3CAE5200F9F8F4 /* REFrostedViewController.m in Sources */,
+				C36DEF681A41AD5100C79176 /* CoffeeViewController.m in Sources */,
 				C35099B31A3CAE5200F9F8F4 /* REFrostedContainerViewController.m in Sources */,
 				C35099B51A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.m in Sources */,
 				3010B54917E9FA67006791FB /* main.m in Sources */,

@@ -96,10 +96,9 @@
         button.buttonClicked = NO;
         
     }else if (button.buttonClicked == NO){
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"resetsideBar" object:nil];
-        
+                
         [[SideBarContent sharedInstance] sideBarCategory:[(UILabel *)[buttonContent viewWithTag:18] text]];
+
         [UIView animateWithDuration:5.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             [self.background setImage:[UIImage imageNamed:[self.backgroundsWithTags objectForKey:[NSString stringWithFormat:@"%ld",(long)[sender tag]-1]]]];
         } completion:^(BOOL finished) {
@@ -112,11 +111,12 @@
         buttonImageInView.hidden = YES;
         button.buttonClicked = YES;
         [self animateCircle:buttonLayer];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"resetsideBar" object:nil];
+
     }
 }
 
 - (void) animateCircle:(UIView *)view{
-    
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.duration = 0.2;

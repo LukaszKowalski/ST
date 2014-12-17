@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SpareTimeCategoryButton.h"
-
+#import "PartyViewController.h"
+#import "DEMOMenuViewController.h"
 
 @interface STCategoryViewController : UIViewController
 
@@ -17,7 +18,6 @@
 @property (strong, nonatomic) UIImageView *background;
 @property (strong, nonatomic) UILabel *buttonName;
 @property (strong, nonatomic) NSMutableDictionary *backgroundsWithTags;
-
 @property (strong, nonatomic) UIViewController *mainScreenViewController;
 
 @end

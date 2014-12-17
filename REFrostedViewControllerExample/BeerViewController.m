@@ -1,13 +1,12 @@
 //
-//  DEMOMenuViewController.m
-//  REFrostedViewControllerExample
+//  BeerViewController.m
+//  SpareTime
 //
-//  Created by Roman Efimov on 9/18/13.
-//  Copyright (c) 2013 Roman Efimov. All rights reserved.
+//  Created by Łukasz Kowalski on 17/12/14.
+//  Copyright (c) 2014 Roman Efimov. All rights reserved.
 //
 
-#import "PartyViewController.h"
-#import "DEMOMenuViewController.h"
+#import "BeerViewController.h"
 #import "STCategoryViewController.h"
 #import "DEMOSecondViewController.h"
 #import "DEMONavigationController.h"
@@ -18,24 +17,24 @@
 #define Category_Subclass_Height 36
 #define Category_Object_Height 146
 
-@interface PartyViewController ()
+@interface BeerViewController ()
 
-@property (nonatomic, strong) DEMOMenuViewController *sidebar;
+
 
 @end
 
-@implementation PartyViewController
+@implementation BeerViewController
 
 
 - (void)viewDidLoad
 {
     
-
+ 
     [super viewDidLoad];
     
-    self.search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 300, 36)];
-    self.search.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:self.search];
+    UIView *search = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 300, 36)];
+    search.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:search];
     
     UITextField *serchTextField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, 290, 36)];
     
@@ -43,22 +42,23 @@
     serchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Szukaj" attributes:@{NSForegroundColorAttributeName: color}];
     
     serchTextField.textColor = [UIColor whiteColor];
-    [self.search addSubview: serchTextField];
+    [search addSubview: serchTextField];
     
-//    [self.view addSubview:self.tableView];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(8, 50, self.view.frame.size.width - 64, 550)];
+    self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.opaque = NO;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self.view addSubview:self.tableView];
     
 }
 -(void)resetTableView{
     [self.tableView reloadData];
     NSLog(@"reset");
-}
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if (scrollView.contentOffset.y > 100) {
-        NSLog(@"scroll");
-        self.search.backgroundColor = [UIColor blueColor];
-
-    }
 }
 
 #pragma mark -
@@ -140,7 +140,7 @@
     if (indexPath.row == 0) {
         
         UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, Category_Box_Height - 6 )];
-        categoryView.backgroundColor = [UIColor blueColor];
+        categoryView.backgroundColor = [UIColor greenColor];
         [cell addSubview:categoryView];
         
         UILabel *categoryName = [[UILabel alloc] initWithFrame:CGRectMake(categoryView.frame.origin.x + 20, categoryView.frame.origin.y + categoryView.frame.size.height/2 -7, 100, 15)];
