@@ -103,9 +103,9 @@
     
     if ([[[SideBarContent sharedInstance] getSideBarCategory] isEqualToString:@"club" ] ) {
         NSLog(@"sidebar = club");
-//        self.partyViewController = [[PartyViewController alloc] init];
-//        self.tableView.delegate = self.partyViewController;
-//        self.tableView.dataSource = self.partyViewController;
+        self.partyViewController = [[PartyViewController alloc] init];
+        self.tableView.delegate = self.partyViewController;
+        self.tableView.dataSource = self.partyViewController;
     } else if ([[[SideBarContent sharedInstance] getSideBarCategory] isEqualToString:@"food" ]){
         NSLog(@"sidebar = food");
         self.foodViewController = [[FoodViewController alloc] init];

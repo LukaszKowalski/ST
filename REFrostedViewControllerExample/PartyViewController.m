@@ -21,6 +21,7 @@
 @interface PartyViewController ()
 
 @property (nonatomic, strong) DEMOMenuViewController *sidebar;
+@property (nonatomic, strong) NSMutableArray *expandedPaths;
 
 @end
 
@@ -112,9 +113,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.expandedPaths = [[NSMutableArray alloc] init];
+    [self.expandedPaths addObject:indexPath];
+    NSLog(@"chujowo :%@", self.expandedPaths);
+    [self.tableView reloadData];
     
-    // selection
-    
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+
 }
 
 #pragma mark -
@@ -122,10 +127,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 ) {
-        return Category_Box_Height;
+    if ([self.expandedPaths containsObject:indexPath]) {
+        if (indexPath.row == 0 ) {
+            return Category_Box_Height;
+        }
+        return 250;
+
+    } else {
+        if (indexPath.row == 0 ) {
+            return Category_Box_Height;
+        }
+        return Category_Object_Height;
+
     }
-    return Category_Object_Height;
 }
 
 
@@ -150,7 +164,8 @@
     if (cell == nil || indexPath.row == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     if (indexPath.row == 0) {
         
         UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, Category_Box_Height - 6 )];
