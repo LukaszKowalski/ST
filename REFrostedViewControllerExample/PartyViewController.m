@@ -113,12 +113,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.expandedPaths = [[NSMutableArray alloc] init];
-    [self.expandedPaths addObject:indexPath];
-    NSLog(@"chujowo :%@", self.expandedPaths);
-    [self.tableView reloadData];
     
-    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    if(self.expandedPaths == nil) {
+        self.expandedPaths = [[NSMutableArray alloc] init];
+    }
+    
+    if([self.expandedPaths containsObject:indexPath]) {
+        [self.expandedPaths removeObject:indexPath];
+    } else {
+        [self.expandedPaths addObject:indexPath];
+    }
+    
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 
 }
 
