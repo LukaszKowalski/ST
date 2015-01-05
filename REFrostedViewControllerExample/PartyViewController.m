@@ -13,6 +13,7 @@
 #import "DEMONavigationController.h"
 #import "UIViewController+REFrostedViewController.h"
 #import "SideBarContent.h"
+#import "PartyTableViewCell.h"
 
 #define Category_Box_Height 72
 #define Category_Subclass_Height 36
@@ -67,14 +68,6 @@
     }
 
 }
-//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    if (scrollView.contentOffset.y >= Category_Box_Height) {
-//       self.search.backgroundColor = [UIColor blueColor];
-//    }
-//    else if (scrollView.contentOffset.x >= 320) {
-//        NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
-//    }
-//}
 
 #pragma mark -
 #pragma mark UITableView Delegate
@@ -85,25 +78,6 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17];
 }
-//
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionIndex
-//{
-//    if (sectionIndex == 0)
-//        return nil;
-//
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 34)];
-//    view.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:0.6f];
-//
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 0, 0)];
-//    label.text = [[SideBarContent sharedInstance] getSideBarCategory];
-//    label.font = [UIFont systemFontOfSize:15];
-//    label.textColor = [UIColor whiteColor];
-//    label.backgroundColor = [UIColor clearColor];
-//    [label sizeToFit];
-//    [view addSubview:label];
-//
-//    return view;
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)sectionIndex
 {
@@ -143,9 +117,11 @@
         if (indexPath.row == 0 ) {
             return Category_Box_Height;
         }
-        return Category_Object_Height;
+        NSLog(@"sprawdzam wysokosc ");
 
+        return Category_Object_Height;
     }
+
 }
 
 
@@ -163,14 +139,22 @@
 {
     
     static NSString *cellIdentifier = @"Cell";
-    
+    static NSString *SpecialCellIdentifier = @"SpecialCell";
+
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    PartyTableViewCell *specialCell = [tableView dequeueReusableCellWithIdentifier:SpecialCellIdentifier];
+
     //
     if (cell == nil || indexPath.row == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+    if (specialCell == nil ) {
+        specialCell = [[PartyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SpecialCellIdentifier];
+    }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSLog(@"sprawdzam wysokosc %f", cell.frame.size.height);
 
     if (indexPath.row == 0) {
         
@@ -183,27 +167,9 @@
         categoryName.textAlignment = NSTextAlignmentLeft;
         categoryName.textColor = [UIColor whiteColor];
         [categoryView addSubview:categoryName];
-        
-    } else {
-        
-        UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, Category_Object_Height - 6)];
-        categoryView.backgroundColor = [UIColor whiteColor];
-        [cell addSubview:categoryView];
-        UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, categoryView.frame.size.width /3, 90)];
-        [categoryView addSubview:imageView1];
-        UIImage *image1 = [UIImage imageNamed:@"kawa1"];
-        imageView1.image = image1;
-        UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(categoryView.frame.size.width /3, 0, categoryView.frame.size.width /3, 90)];
-        [categoryView addSubview:imageView2];
-        UIImage *image2 = [UIImage imageNamed:@"kawa2"];
-        imageView2.image = image2;
-        UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(categoryView.frame.size.width *2 /3, 0, categoryView.frame.size.width /3, 90)];
-        UIImage *image3 = [UIImage imageNamed:@"kawa3"];
-        imageView3.image = image3;
-        [categoryView addSubview:imageView3];
-        
+        return cell;
     }
-    return cell;
+    return specialCell;
 }
 
 @end

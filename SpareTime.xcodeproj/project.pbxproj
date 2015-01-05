@@ -28,6 +28,7 @@
 		C35099B51A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35099AD1A3CAE5200F9F8F4 /* UIImage+REFrostedViewController.m */; };
 		C35099B61A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35099AF1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m */; };
 		C35099B71A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35099B11A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m */; };
+		C35307551A5AAFE30095015C /* PartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C35307541A5AAFE30095015C /* PartyTableViewCell.m */; };
 		C36B83B21A35D64B00672E95 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83921A35D64B00672E95 /* background.png */; };
 		C36B83B31A35D64B00672E95 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C36B83931A35D64B00672E95 /* background1.jpg */; };
 		C36B83B41A35D64B00672E95 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = C36B83941A35D64B00672E95 /* play.png */; };
@@ -108,6 +109,8 @@
 		C35099AF1A3CAE5200F9F8F4 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
 		C35099B01A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
 		C35099B11A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		C35307531A5AAFE30095015C /* PartyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyTableViewCell.h; sourceTree = "<group>"; };
+		C35307541A5AAFE30095015C /* PartyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTableViewCell.m; sourceTree = "<group>"; };
 		C36B83921A35D64B00672E95 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C36B83931A35D64B00672E95 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		C36B83941A35D64B00672E95 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 			children = (
 				C3E2BF0F1A3F42D000D80955 /* PartyViewController.h */,
 				C3E2BF101A3F42D000D80955 /* PartyViewController.m */,
+				C35307531A5AAFE30095015C /* PartyTableViewCell.h */,
+				C35307541A5AAFE30095015C /* PartyTableViewCell.m */,
 				C36DEF661A41AD5100C79176 /* CoffeeViewController.h */,
 				C36DEF671A41AD5100C79176 /* CoffeeViewController.m */,
 				C36DEF691A41AD8500C79176 /* BeerViewController.h */,
@@ -431,6 +436,7 @@
 				3010B54917E9FA67006791FB /* main.m in Sources */,
 				3010B57317E9FA96006791FB /* DEMOSecondViewController.m in Sources */,
 				3010B54D17E9FA67006791FB /* DEMOAppDelegate.m in Sources */,
+				C35307551A5AAFE30095015C /* PartyTableViewCell.m in Sources */,
 				C35099B71A3CAE5200F9F8F4 /* UIViewController+REFrostedViewController.m in Sources */,
 				3010B56D17E9FA7C006791FB /* DEMOMenuViewController.m in Sources */,
 			);

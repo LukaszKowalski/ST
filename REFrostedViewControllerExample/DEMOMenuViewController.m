@@ -55,7 +55,9 @@
     if ([[[SideBarContent sharedInstance] getSideBarCategory] isEqualToString:@"club" ] ) {
         NSLog(@"sidebar = club");
         [self removeCurrentSubviews];
-        self.partyViewController = [[PartyViewController alloc] init];
+        if (!self.partyViewController) {
+            self.partyViewController = [[PartyViewController alloc] init];
+        }
         [self.view addSubview:self.partyViewController.view];
         self.tableView.delegate = self.partyViewController;
         self.tableView.dataSource = self.partyViewController;
@@ -71,7 +73,11 @@
         self.tableView.dataSource = self.beerViewController;
     } else if ([[[SideBarContent sharedInstance] getSideBarCategory] isEqualToString:@"coffee" ]){
         NSLog(@"sidebar = coffee");
-        self.coffeeViewController = [[CoffeeViewController alloc] init];
+        [self removeCurrentSubviews];
+        if (!self.coffeeViewController) {
+            self.coffeeViewController = [[CoffeeViewController alloc] init];
+        }
+        [self.view addSubview:self.coffeeViewController.view];
         self.tableView.delegate = self.coffeeViewController;
         self.tableView.dataSource = self.coffeeViewController;
     } else {
@@ -84,7 +90,8 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     [self.view addSubview:self.tableView];
-    
+
+    NSLog(@"liczba widoków %lu i widoki %@", (unsigned long)self.view.subviews.count, self.view.subviews);
 }
 -(void)removeCurrentSubviews{
     NSArray *viewsToRemove = [self.view subviews];
