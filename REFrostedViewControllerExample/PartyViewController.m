@@ -57,12 +57,10 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y >= Category_Box_Height) {
-        NSLog(@"scroll");
         self.search.backgroundColor = [UIColor blueColor];
 
     }
     if (scrollView.contentOffset.y < Category_Box_Height) {
-        NSLog(@"scroll");
         self.search.backgroundColor = [UIColor clearColor];
         
     }
@@ -87,17 +85,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+//    PartyTableViewCell *cell = (PartyTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+
     if(self.expandedPaths == nil) {
         self.expandedPaths = [[NSMutableArray alloc] init];
     }
     
     if([self.expandedPaths containsObject:indexPath]) {
         [self.expandedPaths removeObject:indexPath];
+
     } else {
         [self.expandedPaths addObject:indexPath];
     }
     
+    NSLog(@"komorki rozszerzone %@", self.expandedPaths);
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 
 }
@@ -141,19 +142,26 @@
     static NSString *cellIdentifier = @"Cell";
     static NSString *SpecialCellIdentifier = @"SpecialCell";
 
-    
+    if([self.expandedPaths containsObject:indexPath]) {
+        self.cellOpened = YES;
+    }else{
+        self.cellOpened = NO;
+    }
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    PartyTableViewCell *specialCell = [tableView dequeueReusableCellWithIdentifier:SpecialCellIdentifier];
+    PartyTableViewCell *specialCell = [[PartyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SpecialCellIdentifier cellOpened:self.cellOpened];
 
     //
     if (cell == nil || indexPath.row == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    if (specialCell == nil ) {
-        specialCell = [[PartyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SpecialCellIdentifier];
-    }
+ 
+    
+
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    specialCell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     NSLog(@"sprawdzam wysokosc %f", cell.frame.size.height);
 
     if (indexPath.row == 0) {

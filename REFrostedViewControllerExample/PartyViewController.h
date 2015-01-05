@@ -13,5 +13,8 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIView *search;
+@property (nonatomic, assign) BOOL cellOpened;
 
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier cellOpened:(BOOL)cellOpened;
 @end

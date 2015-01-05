@@ -10,4 +10,8 @@
 
 @interface PartyTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIView *categoryView;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier cellOpened:(BOOL)cellOpened;
+
 @end

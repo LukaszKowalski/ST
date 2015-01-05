@@ -55,12 +55,10 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y >= Category_Box_Height) {
-        NSLog(@"scroll");
         self.search.backgroundColor = [UIColor blueColor];
         
     }
     if (scrollView.contentOffset.y < Category_Box_Height) {
-        NSLog(@"scroll");
         self.search.backgroundColor = [UIColor clearColor];
         
     }
