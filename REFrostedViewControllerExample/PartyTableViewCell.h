@@ -11,6 +11,8 @@
 @interface PartyTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIView *categoryView;
+@property (nonatomic, strong) UIView *photoConteiner;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier cellOpened:(BOOL)cellOpened;
 

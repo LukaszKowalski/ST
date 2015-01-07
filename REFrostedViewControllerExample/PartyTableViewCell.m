@@ -29,28 +29,53 @@
         }
         self.categoryView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.categoryView];
-        UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.categoryView.frame.size.width /3, 90)];
-        [self.categoryView addSubview:imageView1];
-        imageView1.contentMode = UIViewContentModeScaleAspectFit;
+        
+        NSLog(@"szerokość %f", self.frame.size.width);
+        
+        self.photoConteiner = [[UIView alloc] init];
+        self.photoConteiner.frame = CGRectMake(0, 0, 280, 90);
+        self.photoConteiner.backgroundColor = [UIColor redColor];
+        [self.categoryView addSubview:self.photoConteiner];
+        
+        UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
+        [self.photoConteiner addSubview:imageView1];
+        imageView1.contentMode = UIViewContentModeScaleToFill;
         UIImage *image1 = [UIImage imageNamed:@"kawa1"];
         imageView1.image = image1;
         
-        UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.categoryView.frame.size.width /3, 0, self.categoryView.frame.size.width /3, 90)];
-        [self.categoryView addSubview:imageView2];
-        imageView2.contentMode = UIViewContentModeScaleAspectFit;
+        UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(90, 0, 90, 90)];
+        [self.photoConteiner addSubview:imageView2];
+        imageView2.contentMode = UIViewContentModeScaleToFill;
         UIImage *image2 = [UIImage imageNamed:@"kawa2"];
         imageView2.image = image2;
         
-        UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(self.categoryView.frame.size.width *2 /3, 0, self.categoryView.frame.size.width /3, 90)];
+        UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(180, 0, 90, 90)];
         UIImage *image3 = [UIImage imageNamed:@"kawa3"];
-        imageView3.contentMode = UIViewContentModeScaleAspectFit;
+        imageView3.contentMode = UIViewContentModeScaleToFill;
         imageView3.image = image3;
+        [self.photoConteiner addSubview:imageView3];
         
-        [self.categoryView addSubview:imageView3];
+        UILabel *placeName = [[UILabel alloc] init];
+        placeName.text = @"Bank Club";
+        placeName.textColor = [UIColor blueColor];
+        placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 25, Category_Object_Height /3 *2 , 100, 40);
+        [self.categoryView addSubview:placeName];
+        
+        UILabel *plus = [[UILabel alloc] init];
+        plus.backgroundColor = [UIColor blueColor];
+        plus.frame = CGRectMake(self.photoConteiner.frame.origin.x + 200, Category_Object_Height /3 *2 , 2, 20);
+        [self.categoryView addSubview:plus];
+        
+        UILabel *plusTwo = [[UILabel alloc] init];
+        plusTwo.backgroundColor = [UIColor blueColor];
+        plusTwo.frame = CGRectMake(self.photoConteiner.frame.origin.x + 190, Category_Object_Height /3 *2 +10 , 20, 2);
+        [self.categoryView addSubview:plusTwo];
         
         if (cellOpened == YES) {
-            [UIView animateWithDuration:.35 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:.35  delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.categoryView.frame = CGRectMake(0, 0, self.frame.size.width, 250 - 6);
+                self.photoConteiner.frame = CGRectMake(0, 40, self.photoConteiner.frame.size.width, self.photoConteiner.frame.size.height);
+                placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 25, 12, 100, 20);
             } completion:^(BOOL finished) {
                 
             }];
