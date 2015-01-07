@@ -58,27 +58,41 @@
         UILabel *placeName = [[UILabel alloc] init];
         placeName.text = @"Bank Club";
         placeName.textColor = [UIColor blueColor];
-        placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 25, Category_Object_Height /3 *2 , 100, 40);
+        placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 15, Category_Object_Height /3 *2 , 100, 40);
         [self.categoryView addSubview:placeName];
         
-        UILabel *plus = [[UILabel alloc] init];
-        plus.backgroundColor = [UIColor blueColor];
-        plus.frame = CGRectMake(self.photoConteiner.frame.origin.x + 200, Category_Object_Height /3 *2 , 2, 20);
-        [self.categoryView addSubview:plus];
+        UIImageView *plusView = [[UIImageView alloc] initWithFrame:CGRectMake(self.photoConteiner.frame.origin.x + 240, Category_Object_Height /3 *2.3 , 10, 10)];
+        [self.categoryView addSubview:plusView];
+        UIImage *plus = [UIImage imageNamed:@"plus"];
+        plusView.image = plus;
         
-        UILabel *plusTwo = [[UILabel alloc] init];
-        plusTwo.backgroundColor = [UIColor blueColor];
-        plusTwo.frame = CGRectMake(self.photoConteiner.frame.origin.x + 190, Category_Object_Height /3 *2 +10 , 20, 2);
-        [self.categoryView addSubview:plusTwo];
+        UIImageView *minusView = [[UIImageView alloc] initWithFrame:CGRectMake(self.photoConteiner.frame.origin.x + 240, 15 , 10, 10)];
+        [self.categoryView addSubview:minusView];
+        UIImage *minus = [UIImage imageNamed:@"Minus"];
+        minusView.image = minus;
+        minusView.hidden = YES;
         
         if (cellOpened == YES) {
             [UIView animateWithDuration:.35  delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.categoryView.frame = CGRectMake(0, 0, self.frame.size.width, 250 - 6);
                 self.photoConteiner.frame = CGRectMake(0, 40, self.photoConteiner.frame.size.width, self.photoConteiner.frame.size.height);
-                placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 25, 12, 100, 20);
+                placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 15, 12, 100, 20);
+                plusView.hidden = YES;
+                minusView.hidden = NO;
             } completion:^(BOOL finished) {
                 
             }];
+        }else if(cellOpened == NO){
+            [UIView animateWithDuration:.1  delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                self.categoryView.frame = CGRectMake(0, 0, self.frame.size.width, Category_Object_Height - 6);
+                self.photoConteiner.frame = CGRectMake(0, 0, 280, 90);
+                placeName.frame = CGRectMake(self.photoConteiner.frame.origin.x + 15, Category_Object_Height /3 *2 , 100, 40);
+                plusView.hidden = NO;
+                minusView.hidden = YES;
+            } completion:^(BOOL finished) {
+                
+            }];
+
         }
 
     }

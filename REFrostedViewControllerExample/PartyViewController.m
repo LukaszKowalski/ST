@@ -170,11 +170,19 @@
         categoryView.backgroundColor = [UIColor blueColor];
         [cell addSubview:categoryView];
         
-        UILabel *categoryName = [[UILabel alloc] initWithFrame:CGRectMake(categoryView.frame.origin.x + 20, categoryView.frame.origin.y + categoryView.frame.size.height/2 -7, 100, 15)];
-        categoryName.text = [[SideBarContent sharedInstance] getSideBarCategory];
+        UILabel *categoryName = [[UILabel alloc] initWithFrame:CGRectMake(categoryView.frame.origin.x + 20, categoryView.frame.origin.y + categoryView.frame.size.height/2 -7, 100, 20)];
+        categoryName.text = @"Impreza";
         categoryName.textAlignment = NSTextAlignmentLeft;
         categoryName.textColor = [UIColor whiteColor];
         [categoryView addSubview:categoryName];
+        
+        UIButton *changeDay = [[UIButton alloc] init];
+        [changeDay addTarget:self action:@selector(changeDay) forControlEvents:UIControlEventTouchUpInside];
+        changeDay.frame = CGRectMake(categoryView.frame.origin.x + 170, categoryView.frame.origin.y + categoryView.frame.size.height/2 -7, 100, 15);
+        changeDay.backgroundColor = [UIColor redColor];
+        changeDay.titleLabel.text = @"Dzisiaj";
+        [categoryView addSubview:changeDay];
+        
         return cell;
     }
     return specialCell;
